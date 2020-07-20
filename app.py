@@ -3,6 +3,7 @@ from flask_restful import reqparse, abort, Api, Resource, request
 import pickle
 import numpy as np
 from model import NLPModel
+from speechrecognizer import getStringOutVoive
 
 
 
@@ -62,8 +63,9 @@ def post():
         query = request.form.get('query')
         return redirect("http://127.0.0.1:5000/statment?query={}".format(query))
     
+ 
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=False,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0')
 

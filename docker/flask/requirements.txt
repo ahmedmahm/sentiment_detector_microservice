@@ -7,3 +7,4 @@ Numpy==1.18.4
 Pandas==1.0.2
 Flask_restful==0.3.8
 scipy
+SpeechRecognition

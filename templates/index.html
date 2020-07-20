@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
 </head>
 <body>
-     <h1>Sentiment prediction</h1>
-    <form method="POST" >
-    Query <input type="text" name="query">
-    <input type="submit">
-    </form> 
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">LoveWork</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="http://localhost:5000">Home</a></li>
+            <li><a href="https://github.com/ahmedmahm/sentiment_detector_microservice">gitHub</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1> Know How everybody feels about work everyday.</h1>
+    </div>
+    <div class="container">
+        <h2>Sentiment prediction</h2>
+        <form method="POST" >
+        Query <input type="text" name="query">
+        <input type="submit">
+        </form> 
+    </div>
+    <div class="container">
+        <form action="GET">
+            <h3>Say Something</h3>
+            <input type="submit">
+        </form>
+    </div>
+
+     
 </body>
 </html>
