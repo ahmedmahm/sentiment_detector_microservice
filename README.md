@@ -5,8 +5,9 @@
 - [Environment requirements](#environment-requirement)
 - [Installation](#installation)
 - [How To Use](#how-to-use)
-- [Implementation](#implementation)
-- [API Monitoring](#api-monitoring)
+- [Contribution](#contribution)
+
+
 
  ---
 
@@ -15,6 +16,9 @@
 
  Simple Scikit-Learn model deployed as a REST API using Flask RESTful.
  Sentiment prediction : [Naives Bayes classifier](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
+
+ I want to build webapp that do some analysis based on how the employees feel.
+ That will provide a better wotking atmosphere.  
 
 ### Environment Requirement
 
@@ -29,6 +33,7 @@
 - Pandas
 - Flask_restful
 - scipy
+- speechreconition
 
 This Module is [Docker](https://docs.docker.com/) Containerized, All dependencies will be installed while deploying the conatiner.
 
@@ -61,7 +66,7 @@ curl -X GET http://127.0.0.1:5000/statment -d query='$query'
 
 {"prediction": "Positive/Negative", "confidence": int}
 ```
-### Implementation
+### Contribution
 
 - for Implementation testing in case you don't have all the required dependencies
 
@@ -76,14 +81,4 @@ output:
 root@container_ID:/app# python3
 >>> Implement 
 ```
-### API Monitoring 
 
-#### why Monitoring ?
-
-- Performance over time
-- Largest API users
-- Most commonly used API features
-- Error occurrence in the API
-
-* Potintial is Kibana 
-![kibana](https://linagora.com/wp-content/uploads/2018/06/Kibana-logo-2.png)
