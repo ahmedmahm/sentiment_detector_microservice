@@ -1,0 +1,24 @@
+version: '3'
+services:
+  flask:
+    image: flask
+    container_name: flask_studiVz_sentApi
+    build:
+      context: ./docker/flask
+      dockerfile: Dockerfile
+    volumes:
+      - "./:/app"
+   
+  nginx:
+    image: nginx
+    container_name: nginx_studiVz_sentApi
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    ports:
+      - 5000:80
+    depends_on:
+      - flask
+    
+
+  
