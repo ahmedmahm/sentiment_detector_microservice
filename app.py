@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, render_template
 from flask_restful import reqparse, abort, Api, Resource, request
 import pickle
 import numpy as np
@@ -61,12 +61,8 @@ def post():
     if request.method == 'POST':
         query = request.form.get('query')
         return redirect("http://127.0.0.1:5000/statment?query={}".format(query))
-
-    return ''' <h1>Sentiment prediction</h1>
-    <form method="POST" >
-    Query <input type="text" name="query">
-    <input type="submit">
-    </form> '''
+    
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=False,host='0.0.0.0')
